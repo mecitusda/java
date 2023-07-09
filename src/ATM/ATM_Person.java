@@ -1,3 +1,5 @@
+package ATM;
+
 public class ATM_Person {
     public ATM_Person(String isim,int sifre,double Bakiye) {
         this.sifre = sifre;

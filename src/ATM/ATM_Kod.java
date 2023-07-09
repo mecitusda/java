@@ -1,6 +1,10 @@
+package ATM;
+
+import ATM.ATM_Person;
+
 import java.util.Scanner;
 
-public  class ATM_Kod extends  ATM_Person{
+public  class ATM_Kod extends ATM_Person {
     static ATM_Person person =new ATM_Person("Ahmet",3461,65400);;
 
     public ATM_Kod(String isim, int sifre, double Bakiye) {
