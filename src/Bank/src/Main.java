@@ -47,7 +47,7 @@ public class Main extends account{
                 account chosen_acc;
                 System.out.println("----------- Hoşgeldiniz -----------\nHesap Seçiniz:\n1-)account1\n2-)account2");
                 while (true) {                                                     //
-                    int choose = scan.nextInt();                              //
+                    int choose = scan.nextInt();                                  //
                     if (choose == 1) {                                           //
                         chosen_acc = acc1;                                      //
                         break;                                                 //
@@ -63,7 +63,7 @@ public class Main extends account{
                     char choose = scan.next().charAt(0);                   //
                     scan.nextLine();                                      //
                     boolean dongu=Options(choose, chosen_acc);           //         Menü+Choose option and if its quit.
-                    //
+                                                                        //
                     if(dongu) {                                        //then break.
                         break;                                        //
                     }                                                //
