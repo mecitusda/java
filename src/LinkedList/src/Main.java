@@ -36,22 +36,6 @@ public static void Sirala(LinkedList<String> list,String new_one){
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     public static void main(String[] args) {
 
         LinkedList<String> list=new LinkedList<String>();
