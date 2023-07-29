@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="Simple_Notpad.Notpad">
+  <grid id="27dc6" binding="Panel" layout-manager="GridLayoutManager" row-count="10" column-count="9" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="500" height="400"/>
+    </constraints>
+    <properties>
+      <background color="-6240"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <vspacer id="e9c6">
+        <constraints>
+          <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <vspacer id="99ec2">
+        <constraints>
+          <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <vspacer id="9d039">
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <vspacer id="5fd58">
+        <constraints>
+          <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <vspacer id="879b6">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <hspacer id="eb026">
+        <constraints>
+          <grid row="9" column="7" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <hspacer id="28ee3">
+        <constraints>
+          <grid row="9" column="6" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <hspacer id="6b4e">
+        <constraints>
+          <grid row="9" column="5" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <hspacer id="624df">
+        <constraints>
+          <grid row="9" column="4" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <hspacer id="57ba0">
+        <constraints>
+          <grid row="9" column="3" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <hspacer id="23c38">
+        <constraints>
+          <grid row="9" column="2" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <hspacer id="bf790">
+        <constraints>
+          <grid row="9" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <vspacer id="3b544">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <vspacer id="dc2d0">
+        <constraints>
+          <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <vspacer id="6af0a">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <hspacer id="e6fca">
+        <constraints>
+          <grid row="9" column="8" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <scrollpane id="a336f" binding="Metin_Scrol">
+        <constraints>
+          <grid row="1" column="1" row-span="8" col-span="8" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties/>
+        <border type="line">
+          <color color="-1"/>
+        </border>
+        <children>
+          <component id="767fd" class="javax.swing.JTextArea" binding="Metin">
+            <constraints/>
+            <properties>
+              <background color="-2632"/>
+              <font size="18"/>
+              <text value=""/>
+            </properties>
+          </component>
+        </children>
+      </scrollpane>
+      <grid id="c9f0c" class="javax.swing.JMenuBar" binding="Menu" layout-manager="GridLayoutManager" row-count="1" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="9" vsize-policy="3" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties/>
+        <border type="none">
+          <font/>
+          <title-color color="-4473925"/>
+        </border>
+        <children>
+          <grid id="1bb45" class="javax.swing.JMenu" binding="Dosya" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Dosya"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="10b23" class="javax.swing.JMenuItem" binding="Dosya_Ac">
+                <constraints/>
+                <properties>
+                  <text value="Dosya Aç"/>
+                  <toolTipText value="Dosya_Kaydet"/>
+                </properties>
+              </component>
+              <component id="5ecf5" class="javax.swing.JMenuItem" binding="Dosya_Kaydet">
+                <constraints/>
+                <properties>
+                  <text value="Dosya Kaydet"/>
+                </properties>
+              </component>
+              <component id="4e80c" class="javax.swing.JMenuItem" binding="Dosya_Cikis">
+                <constraints/>
+                <properties>
+                  <text value="Çıkış"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="6a2d" class="javax.swing.JMenu" binding="Duzenle" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Düzenle"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="a1639" class="javax.swing.JMenuItem" binding="Duzenle_Renk">
+                <constraints/>
+                <properties>
+                  <text value="Renk Seç"/>
+                </properties>
+              </component>
+              <grid id="ddb23" class="javax.swing.JMenu" binding="Duzenle_Yazı_Tipi" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+                <constraints/>
+                <properties>
+                  <text value="Yazı Tipi"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <component id="9bc2f" class="javax.swing.JMenuItem" binding="Verdana">
+                    <constraints/>
+                    <properties>
+                      <text value="Verdana"/>
+                    </properties>
+                  </component>
+                  <hspacer id="160db">
+                    <constraints/>
+                  </hspacer>
+                  <vspacer id="c0113">
+                    <constraints/>
+                  </vspacer>
+                  <component id="7065e" class="javax.swing.JMenuItem" binding="Batang">
+                    <constraints/>
+                    <properties>
+                      <text value="Bodoni MT"/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+            </children>
+          </grid>
+          <hspacer id="a97e7">
+            <constraints>
+              <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </hspacer>
+        </children>
+      </grid>
+    </children>
+  </grid>
+  <buttonGroups>
+    <group name="buttonGroup1">
+      <member id="9c802"/>
+      <member id="8273"/>
+      <member id="93f69"/>
+    </group>
+  </buttonGroups>
+</form>
