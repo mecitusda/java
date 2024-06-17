@@ -1,0 +1,276 @@
+import java.util.*;
+
+public class Fixtur {
+    private  ArrayList<Team> teams=new ArrayList<>(18);
+    private  ArrayList<Team> hold_team=new ArrayList<>(18);
+    Map<Team,Team> match_yapacaklar = new LinkedHashMap<Team, Team>(9);
+    static int a=1;
+    public Fixtur(){
+
+    }
+
+    public boolean takimlar_dogru(){
+        while (true) {
+
+
+            while (teams.size() != 0) {
+
+                Collections.shuffle(teams);
+                Team team1 = teams.get(0);
+                Collections.shuffle(teams);
+                Team team2 = teams.get(0);
+
+                if (team1.getTeam_Name().equals(team2.getTeam_Name())) {
+                    continue;
+                }
+
+                match_yapacaklar.put(team1, team2);
+                teams.remove(team1);
+                teams.remove(team2);
+            }
+
+            boolean uyuşmayan_var=false;
+            for (Map.Entry<Team, Team> s : match_yapacaklar.entrySet()) {
+
+                if (s.getKey().getDeplasmanda_oynananlar().contains(s.getValue())&&s.getKey().getEvde_oynanlar().contains(s.getValue())) {
+                        uyuşmayan_var=true;
+                    s.getKey().remove_Oynanmayan_Takimlar(s.getValue());//oynanmayanlardan çıkarıldı
+                    s.getValue().remove_Oynanmayan_Takimlar(s.getKey());
+                        break;
+                }
+                else if (s.getKey().getEvde_oynanlar().contains(s.getValue())&&s.getKey().getDeplasmanda_oynananlar().contains(s.getValue())) {
+                        uyuşmayan_var=true;
+                    s.getKey().remove_Oynanmayan_Takimlar(s.getValue());//oynanmayanlardan çıkarıldı
+                    s.getValue().remove_Oynanmayan_Takimlar(s.getKey());
+                        break;
+                    }
+
+                }
+            if(uyuşmayan_var){
+                for(Map.Entry<Team,Team> s : match_yapacaklar.entrySet()) {
+                    teams.add(s.getKey());
+                    teams.add(s.getValue());
+
+
+                }
+                match_yapacaklar.clear();
+                continue;
+            }
+            return true;
+            }
+
+
+
+
+
+
+
+        }
+
+
+
+    public  ArrayList<Team> team_matching(ArrayList<Team> team) {
+        teams = team;
+        int temp=1;
+        int T1 = 0;
+        int T2 = 0;
+
+        takimlar_dogru();//match yapacakları ayarladım.Şuan maça hazırlar.
+
+
+
+        for(Map.Entry<Team,Team> s : match_yapacaklar.entrySet()){
+
+            Team team1=s.getKey();
+            Team team2=s.getValue();
+            teams.add(team1);
+            teams.add(team2);
+            if (!team1.getDeplasmanda_oynananlar().contains(team2) ) {//deplasmanda
+                team2.add_Supperter_Strength();//2. takımın sahasında oynandığı için ev sahibi şansını ekledim.
+                T1 = Player_Chance.goal_Chance(team1, team2); //maç yapıldı
+                T2 = Player_Chance.goal_Chance(team2, team1);//
+                team2.addEvde_oynananlar(team1);//takım1 ile evde oynandı
+                team1.addDeplasmanda_oynananlar(team2);//takım2 ile deplasmanda oynandı
+                team1.setPlayed_Count(1);//oynanan maç sayılarını arttırdım.
+                team2.setPlayed_Count(1);
+
+
+                team2.remove_Supperter_Strength();  //maçtan sonra gücü düzeltiyorum
+                team1.setGoal_Count(T1);
+                team1.setGoal_agains(T2);//atılan golleri yazıyorum.
+                team2.setGoal_Count(T2);
+                team2.setGoal_agains(T1);
+                if (T1 > T2) {
+                    team1.setWin_Count(1);
+                    team2.setLose_Count(1);//win ve lose u arttırıyorum
+                } else if (T1 < T2) {
+                    team2.setWin_Count(1);
+                    team1.setLose_Count(1);//win ve lose u arttırıyorum
+                } else {
+                    team1.setDraws_Count(1);
+                    team2.setDraws_Count(1);//win ve lose u arttırıyorum
+                }
+                System.out.println((temp++) + ". maç " + team1.getTeam_Name() + " " + T1 + "-" + T2 + " " + team2.getTeam_Name());
+
+            }
+
+            else if (!team1.getEvde_oynanlar().contains(team2)) {//evde
+
+
+                team1.add_Supperter_Strength();//1. takımın sahasında oynandığı için ev sahibi şansını ekledim.
+                T1 = Player_Chance.goal_Chance(team1, team2); //maç yapıldı
+                T2 = Player_Chance.goal_Chance(team2, team1);//
+
+                team1.addEvde_oynananlar(team2);//takım2 ile evde oynandı
+                team2.addDeplasmanda_oynananlar(team1);//takım1 ile deplasmanda oynandı
+                team1.setPlayed_Count(1);
+                team2.setPlayed_Count(1);
+                //oynanmayanlardan çıkarıldı
+                team1.remove_Supperter_Strength();//maçtan sonra gücü düzeltiyorum
+                team1.setGoal_Count(T1);
+                team1.setGoal_agains(T2);//atılan golleri yazıyorum.
+                team2.setGoal_Count(T2);
+                team2.setGoal_agains(T1);
+                if (T1 > T2) {
+                    team1.setWin_Count(1);
+                    team2.setLose_Count(1);//win ve lose u arttırıyorum
+                } else if (T1 < T2) {
+                    team2.setWin_Count(1);
+                    team1.setLose_Count(1);//win ve lose u arttırıyorum
+                } else {
+                    team1.setDraws_Count(1);
+                    team2.setDraws_Count(1);//win ve lose u arttırıyorum
+                }
+                System.out.println((temp++) + ". maç " + team1.getTeam_Name() + " " + T1 + "-" + T2 + " " + team2.getTeam_Name());
+
+            }
+
+        }
+        match_yapacaklar.clear();
+        return teams;
+
+
+
+
+            /*while (teams.size() != 0) {
+                Collections.shuffle(teams);
+                Team team1 = teams.get(0);
+                Collections.shuffle(teams);
+                Team team2 = teams.get(0);
+
+                if (team1.getTeam_Name() == team1.getTeam_Name()) {
+                    continue;
+                }
+
+
+                teams.remove(team1);
+                teams.remove(teams);
+                if (team1.oynanmayan_Takimlar.containsKey(team2) && team1.oynanmayan_Takimlar.get(team2) == 2) {//deplasmanda
+                    team2.add_Supperter_Strength();//2. takımın sahasında oynandığı için ev sahibi şansını ekledim.
+                    T1 = Player_Chance.goal_Chance(team1, team2); //maç yapıldı
+                    T2 = Player_Chance.goal_Chance(team2, team1);//
+                    team2.addEvde_oynananlar(team1);//takım1 ile evde oynandı
+                    team1.addDeplasmanda_oynananlar(team2);//takım2 ile deplasmanda oynandı
+                    team1.setPlayed_Count(1);//oynanan maç sayılarını arttırdım.
+                    team2.setPlayed_Count(1);
+
+                    team1.set_Oynanmayan_Takimlar(team2);//Oynanmayan takımlardan sayı düşüldü yane evdede oynanaması gerekiyor.
+                    team2.set_Oynanmayan_Takimlar(team1);
+                    team2.remove_Supperter_Strength();  //maçtan sonra gücü düzeltiyorum
+                    team1.setGoal_Count(T1);
+                    team1.setGoal_agains(T2);//atılan golleri yazıyorum.
+                    team2.setGoal_Count(T2);
+                    team2.setGoal_agains(T1);
+                    if (T1 > T2) {
+                        team1.setWin_Count(1);
+                        team2.setLose_Count(1);//win ve lose u arttırıyorum
+                    } else if (T1 < T2) {
+                        team2.setWin_Count(1);
+                        team1.setLose_Count(1);//win ve lose u arttırıyorum
+                    } else {
+                        team1.setDraws_Count(1);
+                        team2.setDraws_Count(1);//win ve lose u arttırıyorum
+                    }
+                    System.out.println((temp++) + ". maç " + team1.getTeam_Name() + " " + T1 + "-" + T2 + " " + team2.getTeam_Name());
+
+                    hold_team.add(team1);//takımları kaybetmeden dönüşümlü kullanıyorum.
+                    hold_team.add(team2);
+
+                }//oynanmayanlardan çıkarıldı
+                else if (team1.oynanmayan_Takimlar.containsKey(team2) && team1.oynanmayan_Takimlar.get(team2) == 1) {//evde
+
+
+                    team1.add_Supperter_Strength();//1. takımın sahasında oynandığı için ev sahibi şansını ekledim.
+                    T1 = Player_Chance.goal_Chance(team1, team2); //maç yapıldı
+                    T2 = Player_Chance.goal_Chance(team2, team1);//
+
+                    team1.addEvde_oynananlar(team2);//takım2 ile evde oynandı
+                    team2.addDeplasmanda_oynananlar(team1);//takım1 ile deplasmanda oynandı
+                    team1.setPlayed_Count(1);
+                    team2.setPlayed_Count(1);
+                    team1.remove_Oynanmayan_Takimlar(team2);//oynanmayanlardan çıkarıldı
+                    team2.remove_Oynanmayan_Takimlar(team1);//oynanmayanlardan çıkarıldı
+                    team1.remove_Supperter_Strength();//maçtan sonra gücü düzeltiyorum
+                    team1.setGoal_Count(T1);
+                    team1.setGoal_agains(T2);//atılan golleri yazıyorum.
+                    team2.setGoal_Count(T2);
+                    team2.setGoal_agains(T1);
+                    if (T1 > T2) {
+                        team1.setWin_Count(1);
+                        team2.setLose_Count(1);//win ve lose u arttırıyorum
+                    } else if (T1 < T2) {
+                        team2.setWin_Count(1);
+                        team1.setLose_Count(1);//win ve lose u arttırıyorum
+                    } else {
+                        team1.setDraws_Count(1);
+                        team2.setDraws_Count(1);//win ve lose u arttırıyorum
+                    }
+                    System.out.println((temp++) + ". maç " + team1.getTeam_Name() + " " + T1 + "-" + T2 + " " + team2.getTeam_Name());
+                    hold_team.add(team1);//takımları kaybetmeden dönüşümlü kullanıyorum.
+                    hold_team.add(team2);
+
+                }
+                ////////////////////////////////////////
+
+                else if (team1.oynanmayan_Takimlar.containsKey(team2) && team1.oynanmayan_Takimlar.get(team2) == 0) {
+
+                    teams.add(hold_team.get(0));
+                    teams.add(hold_team.get(1));
+                } else {
+
+
+                System.out.println(team1.getTeam_Name()+team1.getTeam_Name());
+                teams.add(hold_team.get(0));
+                teams.add(hold_team.get(1));
+
+                }
+
+
+            }*/
+
+          /*  teams=hold_team;//sonraki haftalarda kullanmak için tekrar teams değişkenine veriyorum.
+            System.out.println("Returnledi");
+            return teams;
+*/
+
+
+
+
+
+
+        }
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+

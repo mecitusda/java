@@ -1,0 +1,302 @@
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.Random;
+
+public class Team {
+    private ArrayListGoalKeeper goalKeepers=new ArrayList(3);
+    ArrayListTeam oynanmayan_Takimlar = new ArrayList(17);
+
+    private int goal_Count=0;gol sayısı
+    private int played_Count=0;oynanan maç sayısı
+    private int draws_Count=0;beraberlik
+    private int win_Count=0;kazanılan maç
+    private int lose_Count=0;kaybedilen
+    private int goal_agains=0;yenilen gol sayısı
+    private int av=0;averaj
+    private int Point=0;puan
+
+    private ArrayListAttacker attackers=new ArrayList(6);
+    private ArrayListMidfielder midfielders=new ArrayList(6);
+
+    public String getTeam_Name() {
+        return team_Name;
+    }
+
+    public void setTeam_Name(String team_Name) {
+        this.team_Name = team_Name;
+    }
+
+    private ArrayListDefender defenders=new ArrayList(10);
+
+    private ArrayListPlayer players=new ArrayList(25);
+
+    private ArrayListTeam deplasmanda_oynananlar=new ArrayList();
+
+    private ArrayListTeam evde_oynananlar=new ArrayList();
+    private String team_Name;
+    private double average_Goalkeeper_Strength;
+    private double average_Defender_Strength;
+    private double average_Midfielder_Strength;
+    private double average_Attacker_Strength;
+    private double team_average_Strength;
+    private double Supperter_Strength=(team_average_Strength)%11;
+    public Team(String team_Name){
+        this.team_Name=team_Name;
+        calculate();
+
+    }
+    public void calculate(){
+        calculate_Attacker_Strength();
+        calculate_average_Strength();
+        calculate_Defender_Strength();
+        calculate_Midfielder_Strength();
+        calculate_GoalKeeper_Strength();
+    }
+    public void calculate_GoalKeeper_Strength(){
+        double toplam=0;
+        for(GoalKeeper tempgoalKeepers){
+            toplam+=temp.getGoalKeeper_Strength();
+        }
+        average_Goalkeeper_Strength=toplam3;
+    }
+
+    public void calculate_Attacker_Strength(){
+        double toplam=0;
+        for(Attacker tempattackers){
+            toplam+=temp.getOffensive_Strength();
+        }
+        average_Attacker_Strength=toplam6;
+    }
+
+    public void calculate_Defender_Strength(){
+        double toplam=0;
+        for(Defender tempdefenders){
+            toplam+=temp.getDefensive_Strength();
+        }
+        average_Defender_Strength=toplam(double)10;
+    }
+
+    public void calculate_Midfielder_Strength(){
+        double toplam=0;
+        for(Midfielder tempmidfielders){
+            toplam+=temp.getMidfielder_Strength();
+        }
+        average_Midfielder_Strength=toplam6;
+    }
+
+    public void calculate_average_Strength(){
+        team_average_Strength=(average_Attacker_Strength+average_Goalkeeper_Strength+average_Midfielder_Strength+average_Defender_Strength)4;
+    }
+
+
+    public void setGoalKeepers(GoalKeeper goalKeeper) {
+        goalKeepers.add(goalKeeper);
+    }
+
+
+
+    public void setAttackers(Attacker attacker) {
+        attackers.add(attacker);
+    }
+
+
+
+    public void setMidfielders(Midfielder midfielder) {
+        midfielders.add(midfielder);
+    }
+
+
+
+    public void setDefenders(Defender defender) {
+        defenders.add(defender);
+    }
+
+
+
+    public double getAverage_Goalkeeper_Strength() {
+        return average_Goalkeeper_Strength;
+    }
+
+
+
+    public double getAverage_Defender_Strength() {
+        return average_Defender_Strength;
+    }
+
+
+
+    public double getAverage_Midfielder_Strength() {
+        return average_Midfielder_Strength;
+    }
+
+
+
+    public double getAverage_Attacker_Strength() {
+        return average_Attacker_Strength;
+    }
+
+
+
+    public double getTeam_average_Strength() {
+        return team_average_Strength;
+    }
+    public void add_Supperter_Strength(){
+        team_average_Strength+=Supperter_Strength;
+    }
+    public void remove_Supperter_Strength(){
+        team_average_Strength-=Supperter_Strength;
+    }
+
+
+
+
+    public  void team_toString(){
+            System.out.println(Takım ismi +team_Name+n +
+                    Kaleciler );
+            for(int i=0;i3;i++){
+                if(i==2) {
+                    System.out.println(goalKeepers.get(i) + .);
+                    break;
+                }
+                System.out.println(goalKeepers.get(i)+,);
+            }
+            System.out.println(nDefanslar );
+        for(int i=0;i10;i++){
+            if(i==9) {
+                System.out.println(defenders.get(i) + .);
+                break;
+            }
+            System.out.println(defenders.get(i)+,);
+
+        }
+            System.out.println(Hücumcular );
+
+        for(int i=0;i6;i++){
+
+            if(i==5) {
+                System.out.println(attackers.get(i) + .);
+                break;
+            }
+            System.out.println(attackers.get(i)+,);
+        }
+        System.out.println(Orta sahalar);
+        for(int i=0;i6;i++){
+
+            if(i==5) {
+                System.out.println(midfielders.get(i) + .);
+                break;
+            }
+            System.out.println(midfielders.get(i)+,);
+        }
+    }
+
+    public int getGoal_Count() {
+        return goal_Count;
+    }
+
+    public void setGoal_Count(int count) {
+        this.goal_Count += count;
+        av=this.goal_Count-goal_agains;
+    }
+
+    public int getPlayed_Count() {
+        return played_Count;
+    }
+
+    public void setPlayed_Count(int played_Count) {
+        this.played_Count += played_Count;
+    }
+
+    public int getDraws_Count() {
+        return draws_Count;
+    }
+
+    public void setDraws_Count(int draws_Count) {
+        this.draws_Count += draws_Count;
+        this.Point+=1;
+    }
+
+    public int getWin_Count() {
+
+        return this.win_Count;
+    }
+
+    public void setWin_Count(int win_Count) {
+
+        this.win_Count += win_Count;
+        this.Point+=3;
+    }
+
+    public int getLose_Count() {
+        return lose_Count;
+    }
+
+    public void setLose_Count(int lose_Count) {
+        this.lose_Count += lose_Count;
+    }
+
+    public int getGoal_agains() {
+        return goal_agains;
+    }
+
+    public void setGoal_agains(int gol) {
+
+        this.goal_agains += gol;
+        av=goal_Count-this.goal_agains;
+    }
+
+    public int getAv() {
+        return av;
+    }
+
+    public void setAv(int av) {
+        this.av = av;
+    }
+
+    public int getPoint() {
+
+        return Point;
+    }
+
+    public void setPoint(int point) {
+        Point = point;
+    }
+
+    public void remove_Oynanmayan_Takimlar(Team team) {
+        oynanmayan_Takimlar.remove(team);
+    }
+
+
+    public void addOynanmayan_Takimlar(Team takim) {
+        this.oynanmayan_Takimlar.add(takim);
+    }
+
+
+    public ArrayListTeam getDeplasmanda_oynananlar() {
+        return deplasmanda_oynananlar;
+    }
+
+    public void addDeplasmanda_oynananlar(Team team) {
+        this.deplasmanda_oynananlar.add(team);
+    }
+
+    public ArrayListTeam getEvde_oynanlar() {
+        return evde_oynananlar;
+    }
+
+    public void addEvde_oynananlar(Team team) {
+        this.evde_oynananlar.add(team);
+    }
+    public void team_Strengths(){
+        System.out.println(Takım ismi +team_Name+n+
+                Kaleci gücü +this.getAverage_Goalkeeper_Strength()+,n+
+                Savunmacı gücü +this.getAverage_Defender_Strength()+,n+
+                Orta saha gücü +this.getAverage_Midfielder_Strength()+,n+
+                Hücumcu gücü +this.getAverage_Attacker_Strength()+,n+
+                Takım gücü +this.getTeam_average_Strength()+.
+
+        );
+    }
+
+}

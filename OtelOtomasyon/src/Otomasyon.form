@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="Otomasyon">
+  <grid id="27dc6" binding="otomasyon_Panel" layout-manager="GridLayoutManager" row-count="8" column-count="17" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="1122" height="330"/>
+    </constraints>
+    <properties>
+      <background color="-13946835"/>
+      <font name="Bookshelf Symbol 7" size="16" style="1"/>
+      <foreground color="-11236184"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <hspacer id="671b0">
+        <constraints>
+          <grid row="0" column="15" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="14" height="22"/>
+          </grid>
+        </constraints>
+      </hspacer>
+      <hspacer id="4e336">
+        <constraints>
+          <grid row="0" column="14" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="14" height="22"/>
+          </grid>
+        </constraints>
+      </hspacer>
+      <hspacer id="c3a0d">
+        <constraints>
+          <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="14" height="22"/>
+          </grid>
+        </constraints>
+      </hspacer>
+      <hspacer id="c8a88">
+        <constraints>
+          <grid row="0" column="12" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="14" height="22"/>
+          </grid>
+        </constraints>
+      </hspacer>
+      <hspacer id="69583">
+        <constraints>
+          <grid row="0" column="6" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="14" height="22"/>
+          </grid>
+        </constraints>
+      </hspacer>
+      <hspacer id="e2614">
+        <constraints>
+          <grid row="0" column="5" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="14" height="22"/>
+          </grid>
+        </constraints>
+      </hspacer>
+      <hspacer id="b771">
+        <constraints>
+          <grid row="0" column="13" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="14" height="22"/>
+          </grid>
+        </constraints>
+      </hspacer>
+      <hspacer id="d8663">
+        <constraints>
+          <grid row="0" column="7" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="14" height="22"/>
+          </grid>
+        </constraints>
+      </hspacer>
+      <hspacer id="b5109">
+        <constraints>
+          <grid row="0" column="8" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="14" height="22"/>
+          </grid>
+        </constraints>
+      </hspacer>
+      <vspacer id="65357">
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <vspacer id="96223">
+        <constraints>
+          <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <vspacer id="11719">
+        <constraints>
+          <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <vspacer id="e9a7a">
+        <constraints>
+          <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <hspacer id="9732b">
+        <constraints>
+          <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="14" height="22"/>
+          </grid>
+        </constraints>
+      </hspacer>
+      <scrollpane id="f164d">
+        <constraints>
+          <grid row="3" column="1" row-span="5" col-span="16" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-12099470"/>
+          <enabled value="true"/>
+          <focusable value="true"/>
+          <foreground color="-13946835"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="8f049" class="javax.swing.JTable" binding="Table">
+            <constraints/>
+            <properties>
+              <autoCreateRowSorter value="false"/>
+              <background color="-13946835"/>
+              <enabled value="false"/>
+              <fillsViewportHeight value="false"/>
+              <focusable value="true"/>
+              <font name="Bookshelf Symbol 7" size="13" style="1"/>
+              <gridColor color="-13947600"/>
+              <toolTipText value=""/>
+            </properties>
+            <clientProperties>
+              <JTable.autoStartsEdit class="java.lang.Boolean" value="false"/>
+            </clientProperties>
+          </component>
+        </children>
+      </scrollpane>
+      <hspacer id="8ae6e">
+        <constraints>
+          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="14" height="22"/>
+          </grid>
+        </constraints>
+      </hspacer>
+      <hspacer id="467f7">
+        <constraints>
+          <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="14" height="22"/>
+          </grid>
+        </constraints>
+      </hspacer>
+      <component id="589" class="javax.swing.JButton" binding="Cikisbt">
+        <constraints>
+          <grid row="1" column="15" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <maximum-size width="-1" height="100"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-12099470"/>
+          <font name="Bookshelf Symbol 7" size="20" style="1"/>
+          <foreground color="-11236184"/>
+          <text value="Geri"/>
+        </properties>
+      </component>
+      <hspacer id="16fb5">
+        <constraints>
+          <grid row="0" column="16" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="14" height="22"/>
+          </grid>
+        </constraints>
+      </hspacer>
+      <hspacer id="f7437">
+        <constraints>
+          <grid row="0" column="10" row-span="1" col-span="2" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="14" height="22"/>
+          </grid>
+        </constraints>
+      </hspacer>
+      <hspacer id="408f0">
+        <constraints>
+          <grid row="0" column="9" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="14" height="22"/>
+          </grid>
+        </constraints>
+      </hspacer>
+      <vspacer id="68c0b">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <component id="6cc53" class="javax.swing.JLabel" binding="temizliklabel">
+        <constraints>
+          <grid row="1" column="13" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Bookshelf Symbol 7" size="16" style="1"/>
+          <foreground color="-11236184"/>
+          <text value="Temizlik durumu"/>
+        </properties>
+      </component>
+      <component id="d087e" class="javax.swing.JLabel" binding="durumlabel">
+        <constraints>
+          <grid row="1" column="11" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Bookshelf Symbol 7" size="16" style="1"/>
+          <foreground color="-11236184"/>
+          <text value="Oda durumu"/>
+        </properties>
+      </component>
+      <component id="f6805" class="javax.swing.JLabel" binding="kisilabel">
+        <constraints>
+          <grid row="1" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Bookshelf Symbol 7" size="16" style="1"/>
+          <foreground color="-11236184"/>
+          <text value="Kişi sayısı"/>
+        </properties>
+      </component>
+      <vspacer id="81f0">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <vspacer id="c191f">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <component id="385f1" class="javax.swing.JLabel" binding="message">
+        <constraints>
+          <grid row="2" column="15" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Bookshelf Symbol 7" size="12" style="1"/>
+          <foreground color="-11236184"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="ac23c" class="javax.swing.JComboBox" binding="kackisikombo">
+        <constraints>
+          <grid row="2" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-11236184"/>
+          <font name="Bookshelf Symbol 7" size="14" style="0"/>
+          <foreground color="-16777216"/>
+          <model>
+            <item value=""/>
+            <item value="0"/>
+            <item value="1"/>
+            <item value="2"/>
+            <item value="3"/>
+          </model>
+          <selectedIndex value="0"/>
+        </properties>
+      </component>
+      <component id="4ea01" class="javax.swing.JComboBox" binding="odadurumukombo">
+        <constraints>
+          <grid row="2" column="11" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-11236184"/>
+          <font name="Bookshelf Symbol 7" size="14" style="0"/>
+          <foreground color="-16777216"/>
+          <model>
+            <item value=""/>
+            <item value="Dolu"/>
+            <item value="Boş"/>
+            <item value="Rezerve"/>
+          </model>
+          <selectedIndex value="0"/>
+        </properties>
+      </component>
+      <component id="a0f70" class="javax.swing.JComboBox" binding="temizlikdurumukombo">
+        <constraints>
+          <grid row="2" column="13" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-11236184"/>
+          <font name="Bookshelf Symbol 7" size="14" style="0"/>
+          <foreground color="-16777216"/>
+          <model>
+            <item value=""/>
+            <item value="Kirli"/>
+            <item value="Temiz"/>
+          </model>
+          <selectedIndex value="0"/>
+        </properties>
+      </component>
+      <component id="5fce1" class="javax.swing.JButton" binding="araButton" default-binding="true">
+        <constraints>
+          <grid row="2" column="14" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-12099470"/>
+          <font name="Bookshelf Symbol 7" size="20" style="1"/>
+          <foreground color="-11236184"/>
+          <text value="Ara"/>
+        </properties>
+      </component>
+      <component id="35581" class="javax.swing.JComboBox" binding="yataksayisicombo">
+        <constraints>
+          <grid row="2" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-11236184"/>
+          <font name="Bookshelf Symbol 7" size="14" style="0"/>
+          <foreground color="-16777216"/>
+          <model>
+            <item value=""/>
+            <item value="2"/>
+            <item value="3"/>
+          </model>
+          <selectedIndex value="0"/>
+        </properties>
+      </component>
+      <component id="8b9fa" class="javax.swing.JLabel" binding="yataklabel">
+        <constraints>
+          <grid row="1" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Bookshelf Symbol 7" size="16" style="1"/>
+          <foreground color="-11236184"/>
+          <text value="Yatak sayısı"/>
+        </properties>
+      </component>
+      <component id="7d65b" class="javax.swing.JTextField" binding="odaNofield">
+        <constraints>
+          <grid row="2" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-11236184"/>
+          <font name="Bookshelf Symbol 7" size="14" style="0"/>
+          <foreground color="-16777216"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="735e2" class="javax.swing.JLabel" binding="odalabel">
+        <constraints>
+          <grid row="1" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Bookshelf Symbol 7" size="16" style="1"/>
+          <foreground color="-11236184"/>
+          <text value="Oda No"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>
